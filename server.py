@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 import sqlite3, json, os, re
 from contextlib import contextmanager
 from datetime import datetime, timezone
@@ -164,7 +164,7 @@ def valid_brief(r):
 
 @app.get("/")
 def home():
-    return app.send_static_file("index.html")
+    return send_file(BASE / "index.html")
 
 @app.get("/api/health")
 def health():
