@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+giftly.db
+giftly.db-shm
+giftly.db-wal
+.env
+
