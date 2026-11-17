@@ -209,3 +209,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
  .app-footer{padding:18px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.view,.banner-art .gift-box{animation:none!important;transition:none!important}}
+
+/* Use the generated cutout collage in the editorial hero. */
+.banner-art:before,.banner-art:after,.banner-art .gift-box,.banner-art .floating-note{display:none!important}
+.banner-art{height:auto;min-height:255px;display:grid;place-items:center}
+.hero-collage{display:block;width:100%;height:auto;max-height:320px;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(57,43,31,.1))}
+@media(max-width:760px){.banner-art{height:190px;min-height:0}.hero-collage{width:min(100%,420px);max-height:190px}}
+@media(max-width:480px){.banner-art{height:175px}.hero-collage{max-height:175px}}
